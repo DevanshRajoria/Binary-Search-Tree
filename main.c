@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <limits.h>
 
 struct bstNode{
     int data;
@@ -109,7 +110,7 @@ void inOrder(node Node){
 bool isBST1(node Node,int minval,int maxval);
 
 bool isBST(node Node){
-    return isBST1(Node,-12331,12331);
+    return isBST1(Node,INT_MIN,INT_MAX);
 }
 bool isBST1(node Node,int minval,int maxval){
     if(Node == NULL){
